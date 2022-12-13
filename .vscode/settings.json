@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "wiringpi.h": "c",
+    "limits": "c",
+    "pthread.h": "c"
+  }
+}
