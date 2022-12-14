@@ -43,5 +43,7 @@ sudo ./test
 - 알람 삭제: delete MMDDHHmm (delete 12121015)
 - 알람 변경: update MMDDHHmm MMDDHHmm (update 12121015 12131020)
 - 알람 확인: select
-<img width="200" src="https://user-images.githubusercontent.com/45515388/207724034-bb40f0c8-73fa-4690-9b39-d321ef4ac314.png">
+<p align="center">
+  <img width="200" src="https://user-images.githubusercontent.com/45515388/207724034-bb40f0c8-73fa-4690-9b39-d321ef4ac314.png">
+</p>
 - 알람 끄기: tact switch 
