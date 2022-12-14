@@ -18,7 +18,7 @@
 </p>
 <br/>
 <p align="center">
-  스마트폰과의 연결은 Serial Bluetooth Terminal(https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal)를 통해 연결합니다.
+  스마트폰과의 연결은 Serial Bluetooth Terminal( https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal )를 통해 연결합니다.
 </p>
 
 
