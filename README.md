@@ -15,11 +15,7 @@
   <img width="500" src="https://user-images.githubusercontent.com/45515388/207717779-aeecf506-eabb-4139-89f5-1f7933732023.png">
 </p>
 <br/>
-스마트폰과의 연결은  
-
-[Serial Bluetooth Terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal)
-
-를 통해 연결합니다.
+스마트폰과의 연결은  [Serial Bluetooth Terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal)  를 통해 연결합니다.
 
 ## Features
 - 추천 구매가 - 1년 후 15%의 수익을 얻을 확률이 높은 구매가
