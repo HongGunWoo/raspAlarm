@@ -9,17 +9,10 @@ void* switchThread(void* data){
   pinMode(GPIO, INPUT);
   while(1){
     if(digitalRead(GPIO) == 0){
+      pthread_mutex_lock(&mid);
       ((State*)data)->switchOn = 1;
+      pthread_mutex_unlock(&mid);
     }
   }
   return 0;
 }
-
-
-//switchTest
-// int main(int argc, char **argv)
-// {
-// 	wiringPiSetupGpio(); /* wiringPi */
-// 	switchThread();
-// 	return 0;
-// }

@@ -9,7 +9,6 @@
 #include "common.h"
 
 #define BAUD_RATE 115200
-// #define BAUD_RATE 9600
 #define MAX_COMMAND_LENGTH 100
 static const char *UART2_DEV = "/dev/ttyAMA1"; // UART2 연결을 위한 장치 파일
 
@@ -78,9 +77,7 @@ void *bluetoothThread(void *state)
     else if (strcmp(crud, "update") == 0)
     {
       char *preData = subString(7, 14, command);
-      printf("pre : dddd\n");
       char *curData = subString(16, 23, command);
-      printf("cur : eeee\n");
       updateAlarm(fd_serial, atoi(preData), atoi(curData), state);
 
       free(preData);
@@ -89,7 +86,7 @@ void *bluetoothThread(void *state)
 
     free(command);
     free(crud);
-    delay(10);
+    // delay(10);
   }
   serialClose(fd_serial);
 }
@@ -127,7 +124,9 @@ void insertAlarm(int fd_serial, int data, void *state)
     {
       continue;
     }
+    pthread_mutex_lock(&mid);
     ((State *)state)->alarm[i] = data;
+    pthread_mutex_unlock(&mid);
     serialWriteBytes(fd_serial, "insert complete!\n");
     break;
   }
@@ -150,9 +149,13 @@ void deleteAlarm(int fd_serial, int data, void *state)
 
   for (int i = deleteIndex; i < ALARM_SIZE - 1; i++)
   {
+    pthread_mutex_lock(&mid);
     ((State *)state)->alarm[i] = ((State *)state)->alarm[i + 1];
+    pthread_mutex_unlock(&mid);
   }
+  pthread_mutex_lock(&mid);
   ((State *)state)->alarm[ALARM_SIZE - 1] = -1;
+  pthread_mutex_unlock(&mid);
 
   serialWriteBytes(fd_serial, "delete complete!\n");
   printAlarm(fd_serial, state);
@@ -164,7 +167,9 @@ void updateAlarm(int fd_serial, int pre, int cur, void *state)
   {
     if (pre == ((State *)state)->alarm[i])
     {
+      pthread_mutex_lock(&mid);
       ((State *)state)->alarm[i] = cur;
+      pthread_mutex_unlock(&mid);
       break;
     }
   }

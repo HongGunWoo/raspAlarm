@@ -42,6 +42,7 @@ void displayTime(void *data)
   {
     time_t t = time(NULL);
     struct tm tm = *localtime(&t);
+    
     int curTime = (tm.tm_mon + 1) * 1000000 + tm.tm_mday * 10000 + tm.tm_hour * 100 + tm.tm_min;
     int time[] = {tm.tm_hour / 10, tm.tm_hour % 10, tm.tm_min / 10, tm.tm_min % 10};
     
@@ -55,11 +56,16 @@ void displayTime(void *data)
       }
     }
 
-    if(curTime != prevTime)
-    {
-      ((State *)data)->curTime = curTime;
-      prevTime = curTime;
-    }
+    pthread_mutex_lock(&mid);
+    ((State *)data)->curTime = curTime;
+    pthread_mutex_unlock(&mid);
+    // if(curTime != prevTime)
+    // {
+    //   pthread_mutex_lock(&mid);
+    //   ((State *)data)->curTime = curTime;
+    //   pthread_mutex_unlock(&mid);
+    //   prevTime = curTime;
+    // }
 
     for (int digit = 0; digit < 4; digit++)
     {

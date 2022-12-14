@@ -46,9 +46,11 @@ void* speakerThread(void* data)
   while(1){
     if(((State*)data)->alarmOn == 1){
       musicPlay(data);
+      pthread_mutex_lock(&mid);
       ((State*)data)->alarmOn = 0;
+      pthread_mutex_unlock(&mid);
     }
-    delay(100);
+    // delay(100);
   }
 }
 
@@ -56,7 +58,9 @@ void musicPlay(void* data){
   for (int i = 0; i < MUSIC_NOTES; i++)
   {
     if(((State*)data)->switchOn == 1){
+      pthread_mutex_lock(&mid);
       ((State*)data)->switchOn = 0;
+      pthread_mutex_unlock(&mid);
       softToneWrite(GPIO, 0);
       return ;
     }

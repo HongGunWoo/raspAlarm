@@ -31,13 +31,17 @@ void* lightSensorThread(void* data){
     if(curVal >= 220 && light != 3)
     {
       light = 3;
+      pthread_mutex_lock(&mid);
       ((State *)data)->light = 3;
+      pthread_mutex_unlock(&mid);
     }
     if(curVal < 220 && light != 100)
     {
       light = 100;
+      pthread_mutex_lock(&mid);
       ((State *)data)->light = 100;
+      pthread_mutex_unlock(&mid);
     }
-    delay(1000);
+    // delay(1000);
   }
 }

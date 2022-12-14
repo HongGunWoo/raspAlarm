@@ -1,11 +1,11 @@
-test:	blutooth.o main.o speaker.o switch.o display.o lightSensor.o checkAlarm.o
-	gcc -o test blutooth.o main.o speaker.o switch.o display.o lightSensor.o checkAlarm.o -lwiringPi -lpthread
-
-blutooth.o: blutooth.c common.h
-	gcc -c blutooth.c -lwiringPi -lpthread
+test:	main.o blutooth.o speaker.o switch.o display.o lightSensor.o checkAlarm.o
+	gcc -o test main.o blutooth.o speaker.o switch.o display.o lightSensor.o checkAlarm.o -lwiringPi -lpthread
 
 main.o: main.c common.h
 	gcc -c main.c -lwiringPi -lpthread
+
+blutooth.o: blutooth.c common.h
+	gcc -c blutooth.c -lwiringPi -lpthread
 
 speaker.o: speaker.c common.h
 	gcc -c speaker.c -lwiringPi -lpthread

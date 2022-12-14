@@ -3,9 +3,11 @@
 #include <stdlib.h> 
 #include <pthread.h>
 #include <string.h>
+#include <unistd.h>
 #include "common.h"
 
 #define ALARM_SIZE 100
+pthread_mutex_t mid;
 
 int main(){
   if (wiringPiSetupGpio() < 0)
@@ -18,12 +20,14 @@ int main(){
   state.alarmOn = 0;
   memset(state.alarm, -1, sizeof(int) * ALARM_SIZE);
 
-  pthread_mutex_t mid;
   pthread_t speakerT, switchT, bluetoothT, displayT, lightT, checkAlarmT;
   
   //시간을 공유해야하는 것들 speaker, bluetooth, display
   //밝기값 공유 밝기 센서, display
   
+  // pthread_mutex_t mid;
+  // pthread_mutex_t mid = PTHREAD_MUTEX_INITIALIZER;
+
   pthread_mutex_init(&mid, NULL);
   pthread_create(&speakerT, NULL, speakerThread, (void*) &state);
   pthread_create(&switchT, NULL, switchThread, (void*) &state);
