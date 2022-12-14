@@ -15,20 +15,14 @@
   <img width="500" src="https://user-images.githubusercontent.com/45515388/207717779-aeecf506-eabb-4139-89f5-1f7933732023.png">
 </p>
 <br/>
-스마트폰과의 연결은  [Serial Bluetooth Terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal)  를 통해 연결합니다.
+스마트폰과의 연결은 Serial Bluetooth Terminal (https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal) 를 통해 연결합니다.
 
-## Features
-- 추천 구매가 - 1년 후 15%의 수익을 얻을 확률이 높은 구매가
-- 예상 수익률 - 현재가에서 매수했을 때 1년 후 얻을 수 있는 예상 수익률
-- 관심 주식 종목 담기
-- 주식 종목 검색
-- 전체 종목, KOSPI, KOSDAQ 중 원하는 항목 선택
-- 상세 주식 페이지를 통한 1년 주식 가격 차트, BPS, ROE, PBR, 기업 정보 확인
-- 원하는 주식 종목 검색
-
-
-## Run
+## How to run?
 ```sh
-expo start
+make
+sudo ./test
 ```
 
+## Features
+- 스마트폰으로 라즈베리파이에 연결하여 알람 설정(추가/삭제/변경) 가능
+- 밝기 값에 따라 7segment display의 밝기를 2단계(주간, 야간)로 조절
