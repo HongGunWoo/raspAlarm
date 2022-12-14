@@ -8,17 +8,19 @@
 
 ## How to setup?
 <p align="center">
-  <img width="200" src="https://user-images.githubusercontent.com/45515388/207717568-91202446-e071-4760-9842-a6a4bc7c23af.png">
+  <img width="500" src="https://user-images.githubusercontent.com/45515388/207717568-91202446-e071-4760-9842-a6a4bc7c23af.png">
 </p>
 <p align="center">
   전체 시스템 구조는 다음과 같습니다. 따라서 라즈베리파이와 모듈(센서)와의 연결은 아래의 회로도와 같이 연결합니다.
 </p>
-<img width="200" src="https://user-images.githubusercontent.com/45515388/207717779-aeecf506-eabb-4139-89f5-1f7933732023.png">
+<p align="center">
+  <img width="500" src="https://user-images.githubusercontent.com/45515388/207717779-aeecf506-eabb-4139-89f5-1f7933732023.png">
+</p>
 <br/>
 <p align="center">
-  스마트폰과의 연결은 [Serial Bluetooth Terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal)를 통해 연결합니다.
+  스마트폰과의 연결은 <a src="https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal">Serial Bluetooth Terminal</a>를 통해 연결합니다.
 </p>
-
+[Serial Bluetooth Terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal)
 
 <p align="center">
   한국 전체 주식 종목에 대한 예상 수익률과 추천 구매가, 상세 주식 정보들을 참고하여 앞으로의 성장 높다고 생각되는 즉 가치 있는 주식에 투자하세요!  
