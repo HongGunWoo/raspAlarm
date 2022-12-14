@@ -19,6 +19,7 @@
 - YL-40(조도 센서) -> I2C 통신, ADC 사용
 - tact switch
 - 수동 부저(Passive Buzzer) -> PWM 사용
+- pthread를 통해 쓰레드와 mutex사용
 
 ## How to setup?
 <p align="center">
@@ -34,6 +35,7 @@
 
 ## How to run?
 ```sh
+cd {프로젝트 폴더}
 make
 sudo ./test
 ```
