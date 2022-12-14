@@ -10,7 +10,7 @@
 - 스마트폰으로 라즈베리파이에 연결하여 알람 설정(추가/삭제/변경) 가능
 - 밝기 값에 따라 7segment display의 밝기를 2단계(주간, 야간)로 조절
 
-![그림1](https://user-images.githubusercontent.com/45515388/207721524-235ead8f-a8e4-49bc-994a-ebe4aa8d6d3e.gif)
+![KakaoTalk_20221214_034814757](https://user-images.githubusercontent.com/45515388/207721891-c9db27e3-5d06-4981-8fd0-93ae5fe4c23e.gif)
 
 ## 
 
