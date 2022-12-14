@@ -14,11 +14,11 @@
 
 ## Used
 - Raspberry Pi 4 model B
-- 7segment display
-- HC-06(bluetooth module)
-- YL-40
+- 7segment display -> wiringPi의 softPwm 사용
+- HC-06(bluetooth module) -> UART 통신 사용
+- YL-40(조도 센서) -> I2C 통신, ADC 사용
 - tact switch
-- 수동 부저(Passive Buzzer)
+- 수동 부저(Passive Buzzer) -> PWM 사용
 
 ## How to setup?
 <p align="center">
