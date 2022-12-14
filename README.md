@@ -1,5 +1,5 @@
 [데모 영상](https://youtu.be/EzXRV7_FCt8)
-
+[Serial Bluetooth Terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal)
 <h1 align="center">라즈베리파이를 사용한 블루투스 디지털 알람 시계</h1>
 
 <p align="center">
@@ -20,7 +20,7 @@
 <p align="center">
   스마트폰과의 연결은 <a src="https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal">Serial Bluetooth Terminal</a>를 통해 연결합니다.
 </p>
-[Serial Bluetooth Terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal)
+
 
 ## Features
 - 추천 구매가 - 1년 후 15%의 수익을 얻을 확률이 높은 구매가
