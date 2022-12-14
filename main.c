@@ -24,9 +24,6 @@ int main(){
   
   //시간을 공유해야하는 것들 speaker, bluetooth, display
   //밝기값 공유 밝기 센서, display
-  
-  // pthread_mutex_t mid;
-  // pthread_mutex_t mid = PTHREAD_MUTEX_INITIALIZER;
 
   pthread_mutex_init(&mid, NULL);
   pthread_create(&speakerT, NULL, speakerThread, (void*) &state);

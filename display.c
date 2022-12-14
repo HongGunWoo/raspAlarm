@@ -59,13 +59,6 @@ void displayTime(void *data)
     pthread_mutex_lock(&mid);
     ((State *)data)->curTime = curTime;
     pthread_mutex_unlock(&mid);
-    // if(curTime != prevTime)
-    // {
-    //   pthread_mutex_lock(&mid);
-    //   ((State *)data)->curTime = curTime;
-    //   pthread_mutex_unlock(&mid);
-    //   prevTime = curTime;
-    // }
 
     for (int digit = 0; digit < 4; digit++)
     {

@@ -50,7 +50,6 @@ void* speakerThread(void* data)
       ((State*)data)->alarmOn = 0;
       pthread_mutex_unlock(&mid);
     }
-    // delay(100);
   }
 }
 

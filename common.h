@@ -12,8 +12,6 @@ typedef struct _state
   int light;
 } State;
 
-// extern pthread_mutex_t mid;
-
 extern pthread_mutex_t mid;
 extern void *bluetoothThread(void *data);
 extern void *speakerThread(void *data);

@@ -26,7 +26,6 @@ void* lightSensorThread(void* data){
 
     preVal = wiringPiI2CRead(i2c_fd);
     curVal = wiringPiI2CRead(i2c_fd);
-    // printf("조도 Current value= %d \n", curVal);
 
     if(curVal >= 220 && light != 3)
     {
@@ -42,6 +41,5 @@ void* lightSensorThread(void* data){
       ((State *)data)->light = 100;
       pthread_mutex_unlock(&mid);
     }
-    // delay(1000);
   }
 }
